@@ -1,4 +1,4 @@
-# Anotez
+# AnoteZ
 
 *Ninth, responsive, website created using Laravel and JavaScript made in my third year of studying.*
 
@@ -15,30 +15,30 @@ Register page.
 
 Login page.
 
-### *Shopping List page*
-![Shopping List Image](git-image/image3.png)
+### *Notes page*
+![Notes Image](git-image/image3.png)
 
-Viewing, adding, editing and deleting items from the shopping list.
+Viewing all notes.
 
-### *Admin page*
-![Admin Image](git-image/image4.png)
+### *No notes page*
+![No notes Image](git-image/image4.png)
 
-Admin functionalities.
+Page when no notes could be found.
 
-### *Author page*
-![Author Image](git-image/image5.png)
+### *Edit note page*
+![Edit note Image](git-image/image5.png)
 
-Author info.
+Page for editting a note.
 
-### *Login page*
-![Login Image](git-image/image6.png)
+### *Add note page*
+![Add note Image](git-image/image6.png)
 
-Login page.
+Page for adding a note
 
-### *Shopping List page*
-![Shopping List Image](git-image/image7.png)
+### *Contact page*
+![Contact Image](git-image/image7.png)
 
-Viewing, adding, editing and deleting items from the shopping list.
+Contact page.
 
 ### *Admin page*
 ![Admin Image](git-image/image8.png)
@@ -48,4 +48,4 @@ Admin functionalities.
 ### *Author page*
 ![Author Image](git-image/image9.png)
 
-Author info.
+Author info with a little game.
