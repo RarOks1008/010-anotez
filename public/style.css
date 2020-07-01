@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ABeeZee';
+}
+html {
+    background-color: rgb(242, 242, 242);
+}
+input, select {
+    background-color: rgb(242, 242, 242);
+}
+.error_text {
+    margin-top: 10px;
+    color: #FF0000;
+}
+p.add_space_below {
+    margin-bottom: 40px;
+}
+input:focus, textarea:focus, select:focus {
+    border-color: #FF8000;
+    outline: none;
+}
+.documentation_holder {
+	font-size: 40px;
+	color: #000;
+}
+.documentation_holder:hover {
+	color: #FF8000;
+}
+
+/*Header*/
+.header_holder {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.header_holder, .footer_data {
+    background-color: rgb(233, 233, 233);
+}
+.header_holder a {
+    color: #000;
+    text-decoration: none;
+}
+.header_holder .login_logout_button {
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.header_holder .search_form input[type="submit"] {
+    display: none;
+}
+
+/*Footer*/
+.footer_data {
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    margin-left: calc(50% - 150px);
+}
+.footer_data a {
+    text-decoration: none;
+    color: #000;
+}
+.footer_data a p {
+    text-align: center;
+    padding: 5px 0;
+}
+/*Notes Filter*/
+.notes_filter {
+    width: 90%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.notes_filter .search_notes {
+    width: 70px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    background-image: url('img/searchicon.png');
+    background-repeat: no-repeat;
+    padding: 4px 6px 4px 25px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.notes_filter .search_notes:focus {
+    width: 130px;
+}
+.notes_filter select {
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 14px;
+    text-align-last: center;
+}
+
+/*Middle Part*/
+.middle_part {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.middle_part .my_notes {
+    list-style-type: none;
+    width: 98%;
+}
+.middle_part .admintitle {
+    margin-top: 30px;
+}
+.middle_part .my_notes li {
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+.middle_part .my_notes li:hover {
+    border: 1px solid #FF8000;
+}
+.middle_part .my_notes li .note_category_color {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    user-select: none;
+}
+.middle_part .my_notes li .note_category_color abbr {
+    text-decoration: none;
+}
+.middle_part .my_notes li .note_info_section {
+    width: 78%;
+}
+.middle_part .my_notes li .note_info_section a {
+    color: #000;
+    text-decoration: none;
+}
+.middle_part .my_notes li .note_info_section h3, .middle_part .my_notes li .note_info_section p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.middle_part .my_notes li .note_delete_area {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle_part .my_notes li .note_delete_area a {
+    color: #000;
+}
+.middle_part form {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.middle_part form div.divform.addedittitle {
+    margin-bottom: 15px;
+}
+.middle_part form div.divform {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle_part form div input {
+    padding: 5px 10px;
+    border-top: none;
+    border-right: none;
+}
+.middle_part form div input[type="submit"] {
+    cursor: pointer;
+}
+.middle_part form div input[type="email"], .middle_part form div input[type="password"] {
+    width: 60%;
+}
+.middle_part form div label {
+    width: 20%;
+    text-align: center;
+}
+.middle_part .login_register_link {
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.middle_part .login_register_link:hover {
+    text-decoration: underline;
+}
+.middle_part #my_notes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.middle_part #note_paging {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 96%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.middle_part #note_paging li {
+    background-color: rgb(213, 213, 213);
+    padding: 5px;
+    border-bottom: 2px solid #888888;
+    border-left: 1px solid rgba(88, 88, 88, 0.1);
+    cursor: pointer;
+}
+.middle_part #note_paging li:hover {
+    color: #FF0000;
+}
+.middle_part #note_paging li#current_page {
+    opacity: 0.4;
+    cursor: initial;
+    color: #000;
+    user-select: none;
+}
+.middle_part .no_notes_text {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+.middle_part .note_form {
+    margin-top: 10px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+}
+.middle_part .note_form div.divform {
+    display: flex;
+    justify-content: space-between;
+}
+.middle_part .note_form div input[type="color"] {
+    align-self: flex-start;
+}
+.middle_part .note_form div label {
+    width: 30%;
+}
+.middle_part .note_form div input[type="text"] {
+    width: 70%;
+}
+.middle_part .note_form textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+.middle_part .note_form div input[type="submit"], .middle_part .note_form a {
+    padding: 5px 10px;
+    border-bottom: 2px solid #888888;
+    border-left: 1px solid rgba(88, 88, 88, 0.1);
+    font-size: 16px;
+    color: #000;
+}
+.middle_part .note_form a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+.middle_part .note_form select {
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 14px;
+    text-align-last: center;
+}
+.middle_part .admin_panel_link {
+    margin-top: 10px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 70px;
+}
+.middle_part .author_center {
+    text-align: center;
+}
+.middle_part .author_game {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.middle_part .author_error_text {
+    margin-bottom: 70px;
+}
+.middle_part .author_error_text a {
+    text-decoration: none;
+}
+.middle_part .author_error_text a:hover {
+    color: #FF0000;
+}
+.middle_part .author_game img {
+    margin-top: 10px;
+    width: 30%;
+}
+.middle_part .author_game button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+}
+.middle_part .author_game .author_game_buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.middle_part .author_game h3, .middle_part .author_game p {
+    text-align: center;
+}
+.middle_part .contact_form {
+    margin-top: 15px;
+}
+.middle_part .contact_form div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+.middle_part .contact_form input[type="text"], .middle_part .contact_form textarea {
+    margin: 10px 0;
+    border-top: none;
+    border-right: none;
+    background-color: rgb(254, 254, 254);
+    padding: 10px;
+    width: 80%;
+}
+.middle_part .contact_form a {
+    padding: 5px 10px;
+    border-top: none;
+    border-right: none;
+    text-decoration: none;
+    border-bottom: 2px solid #888888;
+    border-left: 1px solid rgba(88, 88, 88, 0.1);
+    color: #000;
+}
+.button_add_note {
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+    right: 5px;
+    padding: 5px;
+    background-color: #FF8000;
+    border-radius: 50%;
+}
+.button_add_note a {
+    color: #000;
+    background-color: #FF8000;
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 50%;
+}
+/*Admin Panel*/
+.admin_part {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.admin_part .error_text {
+    margin-bottom: 70px;
+}
+.admin_part .admin_navigation {
+    width: 30%;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+}
+.admin_part .admin_back_link {
+    text-decoration: none;
+    color: #000;
+}
+.admin_part .admin_navigation h2, .admin_part .admin_navigation ul, .admin_part .admin_navigation ul li, .admin_part .admin_navigation ul li a {
+    background-color: rgb(233, 233, 233);
+}
+.admin_part .admin_navigation h2 {
+    margin-bottom: 20px;
+}
+.admin_part .admin_navigation ul {
+    list-style-type: none;
+}
+.admin_part .admin_navigation ul li {
+    margin: 5px 0;
+}
+.admin_part .admin_navigation ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.admin_part .admin_navigation ul li a:hover {
+     color: #FF8000;
+ }
+.admin_part .admin_layout_content {
+    width: 67%;
+}
+.admin_part .admin_layout_content h2 {
+    text-align: center;
+}
+.admin_part .admin_layout_content table {
+    width: 100%;
+    border-spacing: 0;
+    display: block;
+    overflow-x: auto;
+    margin-bottom: 70px;
+}
+.admin_part .admin_layout_content table tr {
+    width: 100%;
+}
+.admin_part .admin_layout_content table tr:nth-child(2n) {
+    background-color: rgb(225, 225, 225);
+}
+.admin_part .admin_layout_content table tr:hover {
+    background-color: rgb(150, 150, 150);
+}
+.admin_part .admin_layout_content table th {
+    padding: 5px;
+}
+.admin_part .admin_layout_content table td {
+    padding: 2px;
+}
+.admin_part .admin_layout_content table th, .admin_part .admin_layout_content table td {
+    text-align: center;
+}
+.admin_part .admin_layout_content table td img {
+    width: 50%;
+}
+.admin_part .admin_layout_content table .fourcolumn th, .admin_part .admin_layout_content table .fourcolumn td {
+    width: 25%;
+}
+.admin_part .admin_layout_content table .threecolumn th, .admin_part .admin_layout_content table .threecolumn td {
+    width: 25%;
+}
+.admin_part .admin_layout_content table a {
+    color: #000;
+}
+.admin_part .admin_layout_content form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.admin_part .admin_layout_content form div {
+    display: flex;
+    justify-content: space-between;
+}
+.admin_part .admin_layout_content form input {
+    margin-bottom: 10px;
+    border-top: none;
+    border-right: none;
+}
+.admin_part .admin_layout_content form input[type="email"], .admin_part .admin_layout_content form input[type="password"], .admin_part .admin_layout_content form input[type="text"], .admin_part .admin_layout_content form input[type="color"] {
+    width: 80%;
+}
+.admin_part .admin_layout_content form input[type="submit"] {
+    cursor: pointer;
+}
+.admin_part .admin_layout_content form input, .admin_part .admin_layout_content form label {
+    padding: 5px;
+}
+.admin_part form div img {
+    margin-left: 35%;
+    width: 30%;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 500px) {
+    .admin_part {
+        flex-direction: column;
+        align-items: center;
+    }
+    .admin_part .admin_navigation, .admin_part .admin_layout_content {
+        width: 99%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .middle_part form div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .middle_part .note_form a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .middle_part form div input[type="email"], .middle_part form div input[type="password"], .middle_part form div label {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header_holder {
+        flex-direction: column;
+        height: 100px;
+    }
+    .header_holder .login_logout_button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .footer_data {
+        width: 200px;
+        margin-left: calc(50% - 100px);
+    }
+    .middle_part, .admin_part {
+        padding-top: 130px;
+    }
+}
