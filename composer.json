@@ -10,12 +10,12 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "7.30.3",
+        "laravel/framework": "7.30.4",
         "laravel/tinker": "^2.0",
         "phpmailer/phpmailer": "^6.1"
     },
     "require-dev": {
-        "facade/ignition": "^1.4",
+        "facade/ignition": "2.4.2",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
